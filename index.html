@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="juros.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="container-p">
+            <h1 class="title">Simulador de Empréstimo Atlântico</h1>
+
+            <div class="container-f">
+
+                <div class="box">
+
+                    <div class="input">
+                        <label>Valor do Empréstimo</label>
+                        <input onKeyPress="capitalinicial(this);" type="text" id="capitalinicial" placeholder="0,00" required="requered">
+                        <span>R$</span>
+                    </div>
+
+                    <div class="input">
+                        <label>Parcela</label>
+                        <input onKeyPress="Valor-Mensal(this);" type="text" id="Valor-Mensal" placeholder="0,00" required="requered">
+                        <span>R$</span>
+
+                    </div>
+                </div>
+
+
+                <div class="box">
+
+                    <div class="input">
+                        <label>Taxa de juros</label>
+                        <input type="text" id="Taxa-de-juros" placeholder="0,00" required="requered">
+                        <span>%</span>
+                    </div>
+
+                    <div class="input">
+                        <label>Período</label>
+                        <input type="number" id="periodo" placeholder="Meses" required="requered">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <button class="calcular" id="calcular">Calcular</button>
+                <button class="limpar" id="limpar">Limpar</button>
+            </div>
+
+            <div class="container-resultado">
+                <div class="icons">
+                    <h2>Resultado</h2>
+                    <div class="i">
+                        <a href="https://api.whatsapp.com/send?phone=557130376222&text=Quero%20fazer%20uma%20simulação!" target=_blank ">
+                            <i class="bx bxl-whatsapp "></i></a>
+                        <a href="# "> <i class="bx bx-share-alt abrir-modal "></i></a>
+                        <a href="# " value="imprimir " onClick="window.print() "><i class="bx bx-printer "></i></a>
+                    </div>
+                </div>
+                <div class="container-result">
+
+                    <div class="box-result">
+                        <span>Valor investido</span>
+                        <div class="result" id="result1"></div>
+                    </div>
+
+                    <div class="box-result">
+                        <span>Juros acumulado</span>
+                        <div class="result" id="result2"></div>
+                    </div>
+
+                    <div class="box-result">
+                        <span>Valor total</span>
+                        <div class="result" id="result3"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <section class="container-modal">
+        <div class="modal">
+            <div class="modal-child">
+
+                <h1>Compartilhar resultado</h1>
+
+                <div class="img "><img src="img/aumento.png " alt=" "></div>
+
+                <div class="linha "></div>
+
+                <h2>Compartilhar nas redes sociais</h2>
+
+                <div class="icons-modal ">
+                    <a href="# "><i class="bx bxl-facebook "></i></a>
+                    <a href="# "><i class="bx bxl-twitter "></i></a>
+                    <a href="# "><i class="bx bxl-whatsapp "></i></a>
+                </div>
+                <p>"Os resultados dessa calculadora são simulações. Podendo assim, sofrer divergências causadas por mudanças nas regulamentações e taxas. Esta página tem caratér informativo, sem valor legal. Portanto, não dispensa a consula de um profissional
+                            da área. "</p>
+                    <span class="fechar-modal "><a href="# "><i class="bx bx-x "></i></a></span>
+                    
+                </div>
+        </div>
+    </section>
+
+    <script src="juros.js "></script>
+</body>
+
+</html>

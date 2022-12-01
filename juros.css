@@ -1,0 +1,411 @@
+                                @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                                font-family: 'Montserrat', sans-serif;
+                            }
+                            
+                             :root {
+                                --background: #00a4dd;
+                                --background-container: #1c1429;
+                                --background-child: #2e2341;
+                                --background-input: #554667;
+                                --text: #fff;
+                                --border: #505152;
+                            }
+                            
+                            main {
+                                width: 100%;
+                                min-height: 100vh;
+                                background-color: var(--background);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            
+                            .container-p h1 {
+                                font-size: 3rem;
+                                padding: 30px 0;
+                                color: var(--text);
+                            }
+                            
+                            .container-p {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                background-color: var(--background-container);
+                                border-radius: 20px;
+                                max-width: 1300px;
+                                width: 100%;
+                                height: auto;
+                                margin: 20px;
+                            }
+                            
+                            .container-f {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                background-color: var(--background-child);
+                                border: solid var(--border);
+                                border-radius: 20px;
+                                width: 97%;
+                                max-width: 1300px;
+                                height: flex;  
+                            }
+                            
+                            .box {
+                                margin: 0 20px;
+                                                                                       
+                            }
+                            
+                            .container-f .input {
+                                display: flex;
+                                flex-direction: column;
+                                
+                            }
+                            
+                             ::placeholder {
+                                color: #bbccd4;
+                                opacity: 0.5;
+                                
+
+                            }
+                            
+                            input,
+                            label {
+                                margin: 20px 0 0;
+                                font-size: 1.7rem;
+                                font-weight: bold;
+                                color: var(--text);
+                            }
+                            
+                            .input input {
+                                border: none;
+                                background-color: var(--background-input);
+                                border-radius: 10px;
+                                height: 4rem;
+                                align-items: center;
+                                width: 100%;
+                                                            
+                            }
+                            
+                            .input input[type="text"] {
+                                padding-left: 120px;
+                                justify-content: center;
+                            }
+                            
+                            .input input[type="number"] {
+                                padding-left: 30px
+                            }
+                            
+                            .input {
+                                position: relative;
+                                margin: 30px 0;
+                            }
+                            
+                            .input span {
+                                position: absolute;
+                                left: 0;
+                                top: 74px;
+                                font-weight: bold;
+                                font-size: 1.6rem;
+                                color: var(--text);
+                                background-color: var(--background);
+                                padding: 16px 28px;
+                                border-radius: 10px 0px 0px 10px;
+                            }
+                            /* buttons e limpar ------------*/
+                            
+                            .calcular {
+                                font-size: 1.7rem;
+                                font-weight: bold;
+                                border: none;
+                                padding: 12px 30px;
+                                border-radius: 10px;
+                                background-color: var(--background-input);
+                                color: var(--text);
+                                cursor: pointer;
+                                letter-spacing: 2px;
+                                transition: 0.5s;
+                            }
+                            
+                            .limpar:hover {
+                                background-color: var(--background-child);
+                            }
+                            
+                            .limpar {
+                                font-size: 1.7rem;
+                                font-weight: bold;
+                                border: none;
+                                padding: 12px 30px;
+                                border-radius: 10px;
+                                background-color: var(--background-input);
+                                cursor: pointer;
+                                color: var(--text);
+                                letter-spacing: 2px;
+                                transition: 0.5s;
+                            }
+                            
+                            .calcular:hover {
+                                background-color: var(--background-child);
+                            }
+                            
+                            .buttons {
+                                display: flex;
+                                justify-content: space-around;
+                                width: 100%;
+                                padding: 30px 0;
+                            }
+                            /* container resultado -----------*/
+                            
+                            .container-resultado.active {
+                                display: flex;
+                            }
+                            
+                            .container-resultado {
+                                width: 97%;
+                                max-width: 1250px;
+                                display: none;
+                                flex-direction: column;
+                                background-color: var(--background-child);
+                                border-radius: 15px;
+                                height: auto;
+                                margin-bottom: 20px;
+                                color: var(--text);
+                                border: solid var(--border);
+                                border-radius: 15px;
+                                height: auto;
+                                margin-bottom: 20px;
+                            }
+                            
+                            .container-resultado .icons {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 100%;
+                            }
+                            
+                            .container-resultado .icons h2 {
+                                color: var(--text);
+                                margin-left: 15px;
+                                padding: 10px;
+                            }
+                            
+                            .container-resultado .i {
+                                font-size: 2.3rem;
+                                margin-right: 10px;
+                                margin-top: 05px;
+                            }
+                            
+                            .container-resultado .i a {
+                                margin: 0 5px;
+                                color: var(--background);
+                                transition: 0.5;
+                            }
+                            
+                            .container-resultado .i a:hover {
+                                color: var(--background-container);
+                            }
+                            
+                            .container-result {
+                                display: flex;
+                                width: 100%;
+                                max-width: 1250px;
+                                padding: 10px 10px 20px 10px;
+                            }
+                            
+                            .box-result {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                border: solid var(--border);
+                                border-radius: 10px;
+                                width: 100%;
+                                height: auto;
+                                background-color: var(--background-input);
+                                color: var(--text);
+                                font-size: 1.45rem;
+                                font-weight: 700;
+                                margin: 0 10px;
+                            }
+                            
+                            .box-result span {
+                                margin-top: 20px;
+                            }
+                            
+                            .result {
+                                margin: 30px 0;
+                                font-size: 2rem;
+                            }
+                            /* ------------------------modal ---------------*/
+                            
+                            .container-modal {
+                                height: 100vh;
+                                width: 100%;
+                                background-color: rgba(0, 0, 0, .7);
+                                position: fixed;
+                                left: 0;
+                                top: 0;
+                                display: none;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            
+                            .container-modal.active {
+                                display: flex;
+                            }
+                            
+                            .modal {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                background-color: var(--background-child);
+                                max-width: 700px;
+                                width: 100%;
+                                height: auto;
+                                border-radius: 20px;
+                                padding: 30px;
+                                margin: 0 20px;
+                            }
+                            
+                            .modal .fechar-modal {
+                                position: absolute;
+                                right: 10px;
+                                top: 10px;
+                            }
+                            
+                            .modal .fechar-modal {
+                                color: var(--background);
+                                font-size: 2rem;
+                                font-weight: bold;
+                                transition: 0.5;
+                                cursor: pointer;
+                            }
+                            
+                            .modal .fechar-modal {
+                                transform: scale(1.3)
+                            }
+                            
+                            .modal-child {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 100%;
+                                max-width: 600px;
+                            }
+                            
+                            .modal-child p,
+                            h1,
+                            h2 {
+                                font-family: sans-serif;
+                            }
+                            
+                            .modal-child p {
+                                font-size: 0.8rem;
+                                color: var(--text);
+                            }
+                            
+                            .modal-child h1 {
+                                text-align: center;
+                                margin-bottom: 40px;
+                                font-size: 2rem;
+                                color: var(--text)
+                            }
+                            
+                            .modal-child h2 {
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                font-size: 1rem;
+                                color: var(--text);
+                            }
+                            
+                            .modal-child .img {
+                                max-width: 700px;
+                                width: 100%;
+                            }
+                            
+                            .modal-child .img img {
+                                width: 100%;
+                            }
+                            
+                            .linha {
+                                margin: 10px 0;
+                                border-bottom: 1px solid rgba(116, 116, 116, 0.589);
+                                width: 100%;
+                            }
+                            
+                            .modal-child .icons-modal {
+                                margin-bottom: 20px;
+                            }
+                            
+                            .modal-child .icons-modal a {
+                                display: inline-block;
+                                font-size: 1.5rem;
+                                padding: 8px;
+                                border-radius: 50%;
+                                line-height: 10px;
+                                margin: 0 2px;
+                            }
+                            
+                            .modal-child .icons-modal i {
+                                transition: 0.3;
+                            }
+                            
+                            .modal-child .icons-modal i:hover {
+                                transform: scale(1.4);
+                            }
+                            
+                            .modal-child .icons-modal a:nth-child(1) {
+                                background-color: #395693;
+                                color: var(--text);
+                            }
+                            
+                            .modal-child .icons-modal a:nth-child(2) {
+                                background-color: #1da1f2;
+                                color: var(--text);
+                            }
+                            
+                            .modal-child .icons-modal a:nth-child(3) {
+                                background-color: #3fc250;
+                                color: var(--text);
+                            }
+                            /* responsividade------------------ */
+                            
+                            @media (max-width: 800px) {
+                                
+                                container-f {
+                                    height: auto;
+                                }
+                                .container-f {
+                                    grid-template-columns: 1fr;
+                                    padding: 0 20px 20px 20px;
+                                }
+                                .container-p h1 {
+                                    font-size: 1.8rem;
+                                }
+                                .limpar {
+                                    letter-spacing: 2px;
+                                    margin-top: 20px;
+                                }
+                                .buttons {
+                                    flex-direction: column;
+                                    padding: 30px 10px;
+                                }
+                                .result {
+                                    margin: 20px 0;
+                                }
+                                .box-result {
+                                    font-size: 1.5rem;
+                                    height: auto;
+                                    margin: 10px;
+                                }
+                                .container-result {
+                                    flex-direction: column;
+                                    padding: 30px;
+                                }
+                                .title {
+                                    text-align: center;
+                                  }
+                            }
